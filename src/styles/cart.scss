@@ -1,0 +1,103 @@
+.checkout-modal {
+    h2 {
+        margin-top: 8px;
+        margin-bottom: 24px;
+    }
+
+    &_list {
+        display: flex;
+        flex-direction: column;
+        max-height: 400px;
+        min-height: 300px;
+        overflow-y: auto;
+
+        &-item {
+            display: flex;
+            flex-direction: row;
+
+            .img-wrap {
+                flex-basis: 20%;
+                max-width: 20%;
+            }
+
+            .information {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                h4 {
+                    margin-top: 0px;
+                    margin-bottom: 4px;
+                    color: rgba($color: $black, $alpha: 0.8);
+                    font-weight: 500;
+                    letter-spacing: 0.02px;
+                }
+            }
+        }
+    }
+
+    &_footer {
+        border-top: 1px solid rgba(128, 128, 128, 0.288);
+        display: flex;
+        justify-content: space-between;
+
+        .totalAmount {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            h4:first-child {
+                margin: 0 16px;
+            }
+        }
+
+        button {
+            align-self: center;
+            background-color: $primary;
+            color: white;
+            border: unset;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.85;
+            }
+        }
+    }
+}
+
+.empty-cart {
+    margin: auto;
+    color: gray;
+    padding: 24px 0 48px;
+}
+
+.order-container {
+    display: flex;
+    align-content: center;
+    vertical-align: middle;
+    min-height: 350px;
+    
+    &--success {
+        margin: auto;
+        text-align: center;
+
+        img {
+            max-width: 200px;
+        }
+
+        .message {
+            h1 {
+                margin: 0;
+            }
+            h1, span {
+                margin-top: 8px;
+            }
+            span {
+                color: rgba($color: $black, $alpha: 0.5);
+            }
+        }
+    }
+}

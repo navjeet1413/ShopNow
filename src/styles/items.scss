@@ -1,0 +1,127 @@
+.product-list {
+    padding: 16px 32px;
+    width: 100%;
+    min-height: 100vh;
+
+    &--wrapper {
+        display: flex;
+        padding-left: 40px;
+        flex-wrap: wrap;
+    }
+}
+
+.item-card {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    padding: 0;
+    width: 16.66%;
+    margin: 16px;
+    border: 1px solid rgba($color: $black, $alpha: 0.1);
+    border-radius: 4px;
+
+    &__information {
+        padding: 6px 12px;
+        margin-top: 12px;
+
+        .title {
+            text-overflow: ellipsis;
+            font-size: 14px;
+            color: rgba($color: $black, $alpha: 0.8);
+            white-space: nowrap;
+            overflow-x: hidden;
+
+            h3 {
+                margin: 4px 0 8px;
+            }
+        }
+    }
+
+    &__modal {
+        display: flex;
+        .img-wrap {
+            flex-basis: 40%;
+            min-width: 40%;
+        }
+        .meta {
+            flex-grow: 60%;
+            h3 {
+                margin-top: 12px;
+                margin-bottom: 4px;
+                opacity: 0.8;
+            }
+            p {
+                font-weight: 300;
+                color: grey;
+                font-family: Roboto;
+                font-size: 14px;
+            }
+        }
+
+        button.cart-add {
+            border-radius: 0px;
+        }
+        
+        .cart-addon {
+            justify-content: space-between;
+        }
+    }
+}
+
+
+.pricing {
+    small {
+        opacity: 0.5;
+        font-weight: 400;
+        margin-left: 8px;
+    }
+    span {
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+button.cart-add {
+    margin-top: auto;
+    cursor: pointer;
+    width: 100%;
+    background-color: $primary;
+    border-radius: 0px 0px 4px 4px;
+    border: unset;
+    font-size: 14px;
+    padding: 8px 16px;
+    color: $white;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;    
+    
+    &__modal {
+        margin-top: 8px;
+    }
+}
+
+.cart-addon {
+    margin-top: auto;
+    display: flex;
+    &__modal {
+        margin-top: 8px;
+    }
+    // margin-top: 8px;
+    justify-content: space-between;
+    align-items: center;
+    button {
+        cursor: pointer;
+        background-color: $primary;
+        border-radius: 4px;
+        border: unset;
+        font-size: 14px;
+        padding: 8px 12px;
+        color: $white;
+    }
+    span.counter {
+        font-weight: lighter;
+        padding: 0 16px;
+    }
+}

@@ -1,0 +1,40 @@
+.subheader-container {
+    position: sticky;
+    z-index: 1024;
+    top: 66px;
+    ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        list-style: none;
+        background-color: white;
+        box-shadow: 0 15px 10px -15px #1111112b;
+        padding: 0 32px;
+        overflow-x: auto;
+        li {
+            a {
+                display: inline-block;
+                padding: 10px 16px;
+                text-decoration: none;
+                color: black;
+                font-size: 14px;
+                transition: background 100ms ease-in-out;
+                white-space: nowrap;
+
+                &.active, &:hover {
+                    background-color: $primary;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .subheader-container {
+        ul {
+            padding: 0 16px;
+        }
+    }
+}

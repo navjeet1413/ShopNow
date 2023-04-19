@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Doppio+One&family=Roboto:wght@300;400&display=swap');
+@import "./styles/variables";
+@import "./styles/items.scss";
+@import "./styles/header.scss";
+@import "./styles/subheader.scss";
+@import "./styles/loader.scss";
+@import "./styles/modal.scss";
+@import "./styles/cart.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  // font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Doppio One', sans-serif;
+}
+
+body {
+  line-height: 1.5;
+  margin: 0;
+  position: relative;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,147 @@
+$header-background-color: rgba(28, 34, 36, 0.8);
+// $header-background-color: rgba(28, 34, 36, 0.75);
+// $header-background-color: rgba(98, 101, 102, 0.99);
+
+header {
+    margin: 0;
+    padding: 0 0px;
+    background-color: $header-background-color;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 15px 10px -15px #1111112b;
+    position: sticky;
+    z-index: 1024;
+    top: 0;
+}
+
+.nav-brand,
+.cart-container {
+    a, button {
+        display: flex;
+        align-items: center;
+        padding: 12px 32px;
+        text-decoration: none;
+        color: white;
+        font-size: 28px;
+
+        svg {
+            margin-left: 8px;
+            font-size: 30px;
+        }
+    }
+
+    &:hover {
+        background-color: rgba($color: $header-background-color, $alpha: 0.5);
+    }
+}
+
+.cart-container {
+    display: flex;
+
+    a, button {
+        margin: auto;
+        background-color: unset;
+        border: unset;
+        cursor: pointer;
+        font-size: 16px;
+
+        span {
+            &:first-child {
+                padding-right: 8px;
+
+                &[data-items]::after {
+                    position: relative;
+                    content: attr(data-items);
+                    font-size: 12px;
+                    background-color: rgb(172, 124, 190);
+                    padding: 2px 4px;
+                    border-radius: 50%;
+                    top: -8px;
+                    right: -4px;
+                }
+            }
+        }
+    }
+}
+
+.searchBox-container {
+    align-self: center;
+    flex-grow: 1;
+
+    form {
+        position: relative;
+        display: flex;
+        max-width: 100%;
+        margin: 0 80px;
+        justify-content: center;
+
+        input {
+            flex-grow: 1;
+            padding: 8px 56px 8px 16px;
+            border: transparent;
+            border-radius: 2px;
+            width: 100%;
+            font-size: 15px;
+            color: rgba(128, 128, 128, 0.897);
+            outline: rgba($color: $header-background-color, $alpha: 0.5);
+            max-width: 500px;
+        }
+
+        button[type="submit"] {
+            background-color: rgb(172, 124, 190);
+            position: relative;
+            right: 36px;
+            padding-right: 8px !important;
+            padding-left: 8px !important;
+            border: unset;
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+            cursor: pointer;
+        }
+    }
+    form + svg {
+        display: none;
+    }
+}
+
+// Media Queries
+@media screen and (max-width:768px) {
+
+    .nav-brand,
+    .cart-container {
+        a, button {
+            font-size: 22px;
+            padding: 14px 16px;
+        }
+    }
+
+    .cart-container {
+        a, button {
+            font-size: 16px;
+        }
+    }
+
+    .searchBox-container {
+        form {
+            margin: 0 0px;
+        }
+    }
+}
+
+@media screen and (max-width:450px) {
+    .cart-container {
+        a span:first-child,
+        button span:first-child {
+            display: none;
+        }
+    }
+    .searchBox-container {
+        form {
+            display: none;
+        }
+        form + svg {
+            margin-left: auto;
+            display: block;
+        }
+    }
+}
